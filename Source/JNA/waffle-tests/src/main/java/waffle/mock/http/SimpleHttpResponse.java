@@ -218,4 +218,10 @@ public class SimpleHttpResponse extends HttpServletResponseWrapper {
         }
         return null;
     }
+
+    @Override
+    public void setContentLength(int len) {
+        setHeader("Content-Length", Integer.toString(len));
+    }
+
 }
